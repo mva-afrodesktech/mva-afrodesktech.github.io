@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z00NXKZVKT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z00NXKZVKT');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="google-site-verification" content="QwPoPK2H2lW7_viTc79D8z0eV8ElMoOrPbzdqNYvmYU" />
+    
+    <title>MVA Afrodesktech Group | Consultoría y Soluciones TI</title>
+    <meta name="description" content="MVA Afrodesktech Group: Consultoría experta en Ingeniería de Sistemas, CCTV, Infraestructura de Redes y Soporte IT en Bogotá. Liderado por el Ing. Manuel Valdés.">
+    <meta name="author" content="Ing. Manuel Valdés Arredondo">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MVA Afrodesktech Group | Ingeniería de Autor">
+    <meta property="og:description" content="Soluciones integrales en Tecnología, Seguridad Electrónica e Infraestructura. Precisión técnica y compromiso real.">
+    <meta property="og:image" content="image_2.png"> <link rel="icon" type="image/png" href="logo-afro.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Rajdhani:wght@600;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        /* --- 1. CONFIGURACIÓN GENERAL --- */
+        :root {
+            --bg-deep: #02040a;
+            --mva-gold: #D4AF37;
+            --mva-red: #8B0000;
+            --neon-gold: #FFD700;
+            --neon-red: #FF003C;
+            --neon-blue: #00F3FF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-deep); color: white; font-family: 'Montserrat', sans-serif; overflow-x: hidden; min-height: 100vh; scroll-behavior: smooth;}
+
+        /* LIENZO DE FONDO */
+        .image-bg-container {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -10;
+            background-image: url('assets/img/fondo.png'); 
+            background-size: cover; background-position: center; background-repeat: no-repeat;
+        }
+        .bg-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -9;
+            background: linear-gradient(to bottom, rgba(2, 4, 10, 0.75), rgba(0, 0, 0, 0.98));
+            backdrop-filter: blur(3px);
+        }
+
+        /* HEADER & LOGO */
+        header { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; position: relative; z-index: 10; }
+        .nexus-core {
+            width: 320px; height: 320px; position: relative; display: flex; justify-content: center; align-items: center; margin-bottom: 30px;
+            background: rgba(0, 10, 25, 0.6); backdrop-filter: blur(15px); border-radius: 50%; box-shadow: 0 0 60px rgba(0,0,0,0.9); border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+        .ring { position: absolute; border-radius: 50%; }
+        .ring-gold-static { width: 100%; height: 100%; border: 1px solid var(--mva-gold); opacity: 0.6; }
+        .ring-red-spin { width: 110%; height: 110%; border-top: 3px solid var(--neon-red); border-bottom: 3px solid var(--neon-red); border-left: 2px solid transparent; border-right: 2px solid transparent; animation: spin 15s linear infinite; }
+        .ring-blue-spin { width: 125%; height: 125%; border: 1px dashed var(--neon-blue); opacity: 0.5; animation: spinRev 25s linear infinite; }
+        .logo-img { width: 70%; height: 70%; object-fit: contain; z-index: 20; filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.5)); animation: floatLogo 6s ease-in-out infinite; }
+        
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        @keyframes spinRev { 100% { transform: rotate(-360deg); } }
+        @keyframes floatLogo { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+        h1 { font-family: 'Rajdhani', sans-serif; font-size: 4.5rem; color: white; text-transform: uppercase; letter-spacing: 6px; line-height: 1.1; margin-top: 20px; font-weight: 700; text-shadow: 0 5px 20px rgba(0,0,0,1), 0 0 30px rgba(0, 243, 255, 0.4); }
+        .slogan { font-size: 1.3rem; color: var(--neon-gold); letter-spacing: 4px; text-transform: uppercase; font-weight: 600; margin-bottom: 50px; position: relative; padding-bottom: 10px; }
+        .slogan::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: var(--mva-red); }
+
+        .btn-container { display: flex; gap: 25px; flex-wrap: wrap; justify-content: center; width: 100%; }
+        .btn { padding: 16px 45px; text-decoration: none; font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; color: white; transition: 0.3s; position: relative; z-index: 10; border-radius: 4px; cursor: pointer; border: none; }
+        .btn-red { background: linear-gradient(180deg, rgba(139,0,0,0.9) 0%, rgba(255,0,60,0.9) 100%); border: 1px solid var(--neon-red); box-shadow: 0 0 25px rgba(139, 0, 0, 0.5); }
+        .btn-red:hover { transform: translateY(-3px); box-shadow: 0 0 50px rgba(255, 0, 60, 0.8); background: var(--neon-red); }
+        .btn-gold { background: rgba(0,0,0,0.5); border: 2px solid var(--mva-gold); color: var(--mva-gold); backdrop-filter: blur(5px); }
+        .btn-gold:hover { background: var(--mva-gold); color: black; box-shadow: 0 0 35px rgba(212, 175, 55, 0.6); }
+
+        /* --- CORPORATIVO --- */
+        #corporativo { padding: 100px 5%; position: relative; z-index: 5; display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; }
+        
+        .info-panel { flex: 1 1 500px; background: rgba(10, 15, 25, 0.92); border-left: 4px solid var(--mva-gold); padding: 50px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); }
+        .info-panel h2 { color: var(--neon-gold); font-family: 'Rajdhani'; font-size: 2.8rem; margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; }
+        .info-panel p { color: #ccc; line-height: 1.8; margin-bottom: 20px; font-size: 1.1rem; text-align: justify; }
+        
+        .pilares-title { color: var(--neon-blue); font-family: 'Rajdhani'; font-size: 1.8rem; margin: 40px 0 20px 0; text-transform: uppercase; letter-spacing: 2px;}
+        .pilares-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 40px; }
+        .pilar-card { background: rgba(255,255,255,0.03); padding: 25px; border-radius: 5px; border-bottom: 2px solid var(--mva-red); transition: 0.3s; }
+        .pilar-card:hover { background: rgba(255,255,255,0.08); transform: translateY(-5px); }
+        .pilar-card i { color: var(--neon-gold); font-size: 1.5rem; margin-bottom: 15px; display: block; }
+        .pilar-card h4 { font-family: 'Rajdhani'; font-size: 1.2rem; color: white; margin-bottom: 10px; }
+        .pilar-card p { font-size: 0.9rem; color: #aaa; margin: 0; line-height: 1.4; text-align: left;}
+
+        .mv-container { display: flex; gap: 20px; margin: 30px 0; flex-wrap: wrap; }
+        .mv-box { flex: 1 1 250px; background: rgba(0, 243, 255, 0.05); padding: 25px; border-radius: 5px; border-left: 3px solid var(--neon-blue); }
+        .mv-box h4 { color: var(--neon-blue); font-family: 'Rajdhani'; font-size: 1.4rem; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .mv-box p { font-size: 0.95rem; color: #ccc; margin: 0; line-height: 1.6; }
+
+        .side-panel { flex: 1 1 400px; display: flex; flex-direction: column; gap: 20px; width: 100%;}
+        .map-panel { height: 450px; position: relative; border: 2px solid #333; box-shadow: 0 0 30px rgba(0,0,0,0.8); width: 100%;}
+        .map-panel::after { content: ''; position: absolute; top: -10px; right: -10px; width: 60px; height: 60px; border-top: 4px solid var(--neon-red); border-right: 4px solid var(--neon-red); }
+        .map-panel::before { content: ''; position: absolute; bottom: -10px; left: -10px; width: 60px; height: 60px; border-bottom: 4px solid var(--neon-blue); border-left: 4px solid var(--neon-blue); z-index: 10; }
+        iframe { width: 100%; height: 100%; border: 0; filter: grayscale(100%) invert(92%) contrast(83%); }
+        .location-card { background: rgba(10, 15, 25, 0.92); padding: 25px; border-left: 4px solid var(--neon-blue); border: 1px solid rgba(255,255,255,0.05); }
+        .location-card h4 { color: var(--neon-blue); font-family: 'Rajdhani'; margin-bottom: 10px; }
+        .location-card p { font-size: 0.95rem; color: #ddd; margin: 2px 0; }
+
+        /* --- ¿POR QUÉ ELEGIRNOS? --- */
+        #elegirnos {
+            padding: 80px 20px; position: relative; z-index: 5;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+        }
+        .why-wrapper {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;
+        }
+        .why-card {
+            background: rgba(255,255,255,0.02); padding: 40px 30px;
+            border: 1px solid rgba(255,255,255,0.05); text-align: center;
+            position: relative; overflow: hidden; transition: 0.4s;
+        }
+        .why-card::after {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--mva-gold), var(--neon-red));
+            transform: scaleX(0); transition: 0.4s; transform-origin: left;
+        }
+        .why-card:hover { background: rgba(255,255,255,0.05); transform: translateY(-10px); }
+        .why-card:hover::after { transform: scaleX(1); }
+        .why-icon { font-size: 2.5rem; color: var(--neon-blue); margin-bottom: 20px; filter: drop-shadow(0 0 10px rgba(0,243,255,0.4)); }
+        .why-card h3 { font-family: 'Rajdhani'; font-size: 1.5rem; margin-bottom: 15px; color: white; }
+        .why-card p { font-size: 0.95rem; color: #aaa; line-height: 1.6; }
+
+        /* SERVICIOS */
+        #servicios { padding: 80px 20px 120px 20px; position: relative; z-index: 5; }
+        .cards-wrapper { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 50px; }
+        .nexus-card { width: 350px; background: rgba(15, 20, 35, 0.9); border: 1px solid rgba(255,255,255,0.05); padding: 40px 30px; text-align: left; transition: 0.4s; position: relative; backdrop-filter: blur(10px); display: flex; flex-direction: column; }
+        .nexus-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--mva-gold); transition: 0.3s; transform: scaleX(0.5); }
+        .nexus-card:hover { transform: translateY(-10px); background: rgba(25, 35, 55, 0.95); box-shadow: 0 25px 60px rgba(0,0,0,0.7); }
+        .nexus-card:hover::before { transform: scaleX(1); background: var(--neon-red); }
+        .icon { font-size: 3rem; margin-bottom: 20px; display: block; color: var(--mva-gold); text-align: center; filter: drop-shadow(0 0 10px var(--neon-gold)); }
+        .card-btn { background: transparent; border: 1px solid var(--neon-blue); color: var(--neon-blue); padding: 10px 20px; text-align: center; text-transform: uppercase; font-family: 'Rajdhani'; font-weight: bold; cursor: pointer; transition: 0.3s; width: 100%; display: block; margin-top: auto; }
+
+        /* CHATBOT */
+        .chat-trigger { position: fixed; bottom: 30px; right: 30px; width: 70px; height: 70px; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); border: 2px solid var(--neon-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); z-index: 200; cursor: pointer; transition: 0.3s; animation: pulseChat 3s infinite; }
+        .chat-window { display: none; position: fixed; bottom: 110px; right: 30px; width: 350px; height: 500px; background: rgba(10, 15, 25, 0.95); border: 1px solid var(--mva-gold); border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.8); z-index: 199; overflow: hidden; backdrop-filter: blur(10px); flex-direction: column; }
+        .chat-header { background: linear-gradient(90deg, #111, #222); padding: 15px; border-bottom: 2px solid var(--neon-red); display: flex; justify-content: space-between; align-items: center; }
+        .chat-body { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; }
+        .msg { max-width: 80%; padding: 10px 15px; border-radius: 10px; font-size: 0.9rem; line-height: 1.4; }
+        .bot-msg { background: rgba(255,255,255,0.1); color: white; border-left: 3px solid var(--neon-gold); align-self: flex-start; }
+        .user-msg { background: var(--mva-red); color: white; align-self: flex-end; border-right: 3px solid var(--neon-red); }
+        .chat-options { padding: 15px; border-top: 1px solid #333; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; background: rgba(0,0,0,0.5); }
+        .chat-btn { background: transparent; border: 1px solid var(--neon-blue); color: var(--neon-blue); padding: 8px 12px; border-radius: 20px; font-size: 0.8rem; cursor: pointer; transition: 0.3s; font-family: 'Rajdhani'; font-weight: bold; }
+
+        /* FOOTER LEGAL */
+        footer { background: #000; padding: 60px 20px; text-align: center; border-top: 1px solid #222; position: relative; z-index: 10; font-size: 0.9rem; color: #777; }
+        .legal-block { margin-top: 30px; font-size: 0.75rem; border-top: 1px solid #111; padding-top: 20px; line-height: 1.6; }
+        .legal-highlight { color: var(--mva-gold); }
+
+        /* MODALES */
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9); backdrop-filter: blur(5px); }
+        .modal-content { background: #0a0f18; margin: 5% auto; padding: 0; border: 1px solid var(--mva-gold); width: 80%; max-width: 800px; position: relative; box-shadow: 0 0 50px rgba(212, 175, 55, 0.2); }
+        .close-btn { color: #aaa; float: right; font-size: 28px; font-weight: bold; position: absolute; right: 20px; top: 10px; cursor: pointer; }
+        .modal-body { padding: 30px; display: flex; flex-wrap: wrap; gap: 30px; align-items: center; }
+        .modal-img { width: 100%; max-width: 350px; height: auto; border-radius: 4px; border: 2px solid #333; flex: 1 1 300px; }
+        .modal-info { flex: 1 1 300px; text-align: left; }
+        .modal-info ul { list-style: none; padding: 0; }
+        .modal-info li { margin-bottom: 10px; position: relative; padding-left: 20px; color: #ccc; }
+        .modal-info li::before { content: '►'; position: absolute; left: 0; color: var(--mva-red); font-size: 0.8rem; }
+
+        /* MEDIA QUERIES (MÓVIL) */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; letter-spacing: 2px; }
+            .nexus-core { width: 220px; height: 220px; }
+            #corporativo { padding: 50px 20px; }
+            .info-panel { padding: 30px 20px; }
+            .map-panel { height: 350px; }
+            .nexus-card, .why-card { width: 100%; }
+            .chat-window { width: 90%; right: 5%; bottom: 100px; }
+        }
+        /* Estilo para la imagen dentro del botón del chat */
+        .chat-icon-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%; /* Para que sea redonda */
+            object-fit: cover;  /* Para que no se estire ni se deforme */
+            padding: 5px;       /* Un pequeño espacio para que no toque el borde dorado */
+        }
+		
+		.news-card:hover {
+			transform: translateY(-10px);
+			border-color: #00F3FF !important;
+			box-shadow: 0 10px 40px rgba(0, 243, 255, 0.2);
+		}
+		
+    </style>
+</head>
+<body>
+
+    <div class="image-bg-container"></div>
+    <div class="bg-overlay"></div>
+
+    <header>
+        <div class="nexus-core">
+            <div class="ring ring-gold-static"></div>
+            <div class="ring ring-red-spin"></div>
+            <div class="ring ring-blue-spin"></div>
+            <img src="assets/img/logo-afro.png" alt="MVA Logo" class="logo-img">
+        </div>
+        <h1>MVA AFRODESKTECH GROUP</h1>
+        <div class="slogan">Arquitectura de Información | Consultoría TI</div>
+        <div class="btn-container">
+            <button onclick="toggleChat()" class="btn btn-red">HABLAR CON ASESOR</button>
+            <a href="#corporativo" class="btn btn-gold">QUIÉNES SOMOS</a>
+        </div>
+    </header>
+
+    <section id="corporativo">
+        
+        <div class="info-panel">
+            <h2>NUESTRA ORGANIZACIÓN</h2>
+            <p><strong>MVA Afrodesktech Group</strong> es un referente en consultoría y servicios integrales de tecnología, fundado y liderado por el <strong>Ing. Manuel Valdés Arredondo</strong>. Nacemos de la unión entre la precisión de la ingeniería de sistemas y la agilidad de las soluciones digitales modernas.</p>
+            <p>Diseñamos arquitecturas de información robustas y estrategias digitales. Con un ADN basado en la innovación y la excelencia técnica.</p>
+
+            <h3 class="pilares-title">NUESTROS PILARES</h3>
+            <div class="pilares-grid">
+                <div class="pilar-card"><i class="fas fa-microchip"></i><h4>Ingeniería de Autor</h4><p>Respaldo directo de una visión experta en sistemas.</p></div>
+                <div class="pilar-card"><i class="fas fa-lightbulb"></i><h4>Innovación Disruptiva</h4><p>Últimas tendencias tecnológicas (Cloud, Ciberseguridad).</p></div>
+                <div class="pilar-card"><i class="fas fa-handshake"></i><h4>Compromiso Real</h4><p>Tecnología para resultados de negocio tangibles.</p></div>
+            </div>
+
+            <div class="mv-container">
+                <div class="mv-box"><h4><i class="fas fa-bullseye"></i> MISIÓN</h4><p>Garantizar entornos digitales seguros y eficientes mediante soluciones tecnológicas de vanguardia.</p></div>
+                <div class="mv-box"><h4><i class="fas fa-eye"></i> VISIÓN</h4><p>Ser líderes en integración de sistemas en Colombia, reconocidos por nuestra ética técnica.</p></div>
+            </div>
+        </div>
+
+        <div class="side-panel">
+            <div class="map-panel">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.816644266348!2d-74.19894482525792!3d4.626781295347895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9e7d95d10a6d%3A0x6a2c28695f68b75f!2sCl.%2014%20%23119a-50%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1709668000000!5m2!1ses!2sco" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="location-card">
+                <h4>📍 SEDE PRINCIPAL | BOGOTÁ D.C.</h4>
+                <p>Calle 14 # 119A - 50</p>
+                <p>Conjunto Residencial Senderos de la Estancia 2</p>
+                <p style="color:#777; font-size:0.8rem; margin-top:10px;">Ing. Manuel Valdés Arredondo</p>
+            </div>
+			<div class="location-card">
+                <h4>📍 NUESTRAS SEDES | MEDELLÍN - ANTIOQUIA</h4>
+                <p>Carrera 79A # 77BB - 100</p>
+                <p style="color:#777; font-size:0.8rem; margin-top:10px;">Fundada: 2020 | Ing. Manuel Valdés Arredondo</p>
+            </div>
+			<div class="location-card">
+                <h4>📍 NUESTRAS SEDES | QUIBDÓ - CHOCÓ</h4>
+                <p>Calle 25A # 10 - 81</p>
+                <p style="color:#777; font-size:0.8rem; margin-top:10px;">Fundada: 2020 | Ing. Manuel Valdés Arredondo</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="elegirnos">
+        <h2 style="text-align:center; color:white; font-family:'Rajdhani'; font-size:3rem; margin-bottom:60px; text-shadow:0 0 20px black;">¿POR QUÉ <span style="color:var(--neon-blue)">ELEGIRNOS?</span></h2>
+        <div class="why-wrapper">
+            <div class="why-card"><i class="fas fa-shield-alt why-icon"></i><h3>GARANTÍA TÉCNICA</h3><p>No somos vendedores, somos Ingenieros. Cada solución instalada cuenta con garantía de funcionamiento y soporte post-venta real.</p></div>
+            <div class="why-card"><i class="fas fa-rocket why-icon"></i><h3>AGILIDAD & PRECISIÓN</h3><p>Optimizamos tiempos de entrega sin sacrificar la calidad. Entendemos que en su negocio, el tiempo es dinero.</p></div>
+            <div class="why-card"><i class="fas fa-users-cog why-icon"></i><h3>TRATO PERSONALIZADO</h3><p>Trato directo con el Ing. Manuel Valdés. Sin intermediarios. Soluciones de humano a humano.</p></div>
+            <div class="why-card"><i class="fas fa-certificate why-icon"></i><h3>NORMATIVA</h3><p>Diseños que cumplen con los estándares y normativas técnicas vigentes en Colombia.</p></div>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <h2 style="text-align:center; color:white; font-family:'Rajdhani'; font-size:3rem; margin-bottom:60px;">PORTAFOLIO <span style="color:var(--mva-gold)">DE SERVICIOS</span></h2>
+        <div class="cards-wrapper">
+            <div class="nexus-card"><span class="icon"><i class="fas fa-eye"></i></span><h3>SEGURIDAD ELECTRÓNICA & CCTV</h3><p>Implementación de ecosistemas de vigilancia inteligente. Grabación en alta definición con analítica de movimiento y acceso global inmediato.</p><button class="card-btn" onclick="openModal('modal-cctv')">VER DETALLES</button></div>
+            <div class="nexus-card"><span class="icon"><i class="fas fa-network-wired"></i></span><h3>INFRAESTRUCTURA DE RED</h3><p>Construimos autopistas digitales: Redes escalables, seguras y certificadas para el crecimiento de su negocio.</p><button class="card-btn" onclick="openModal('modal-redes')">VER DETALLES</button></div>
+            <div class="nexus-card"><span class="icon"><i class="fas fa-laptop-code"></i></span><h3>SOPORTE IT</h3><p>Respaldo técnico integral. Aseguramos la continuidad de su negocio mediante la optimización de sus recursos tecnológicos.</p><button class="card-btn" onclick="openModal('modal-soporte')">VER DETALLES</button></div>
+			<div class="nexus-card"><span class="icon"><i class="fas fa-user-tie"></i></span><h3>AFRODESKTECH IT: CONSULTORÍA Y DESARROLLO A MEDIDA</h3><p>Desarrollo de software a medida, auditoría de sistemas y consultoría estratégica.</p><button class="card-btn" onclick="openModal('modal-consulta')">VER DETALLES</button></div>
+        </div>
+    </section>
+
+    <div id="modal-cctv" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('modal-cctv')">×</span><div class="modal-body"><img src="assets/img/cctv-detalle.jpg" class="modal-img"><div class="modal-info"><h4>DETALLES CCTV:</h4><ul><li>Cámaras IP / PTZ Inteligentes.</li><li>Analítica de video avanzada.</li><li>Acceso remoto App Móvil.</li></ul><button class="btn btn-red" onclick="sendToWhatsapp('Cotización CCTV')">COTIZAR</button></div></div></div></div>
+    <div id="modal-redes" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('modal-redes')">×</span><div class="modal-body"><img src="assets/img/redes_detalle.png" class="modal-img"><div class="modal-info"><h4>DETALLES REDES:</h4><ul><li>Cableado Estructurado y Certificación.</li><li>Networking y Gestión de Tráfico.</li><li>Gestión de Racks IT.</li><li>Auditoría y Seguridad Perimetral.</li></ul><button class="btn btn-red" onclick="sendToWhatsapp('Cotización Redes')">COTIZAR</button></div></div></div></div>
+    <div id="modal-soporte" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('modal-soporte')">×</span><div class="modal-body"><img src="assets/img/soporte-detalle.jpg" class="modal-img"><div class="modal-info"><h4>DETALLES SOPORTE IT:</h4><ul><li>Hardware Windows/Mac.</li><li>Optimización de Sistemas.</li><li>Backups de Seguridad.</li><li>Mesa de Ayuda (Help Desk).</li><li>Soporte Remoto y On-site.</li><li>Administración de Software.</li></ul><button class="btn btn-red" onclick="sendToWhatsapp('Cotización Soporte')">COTIZAR</button></div></div></div></div>
+	<div id="modal-consulta" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('modal-consulta')">×</span><div class="modal-body"><img src="assets/img/desarrollo.png" class="modal-img"><div class="modal-info"><h4>DETALLES AFRODESKTECH IT:</h4><ul><li>Desarrollo de Software a Medida.</li><li>Auditoría de Sistemas.</li><li>Consultoría Estratégica.</li></ul><button class="btn btn-red" onclick="sendToWhatsapp('Cotización Soporte')">COTIZAR</button></div></div></div></div>
+	
+    <div class="chat-trigger" onclick="toggleChat()">
+    <img src="assets/img/logo-afro.png" alt="Chat MVA" class="chat-icon-img">
+</div>
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header"><h3><div class="status-dot"></div> MVA BOT</h3><span style="cursor:pointer; font-size:1.5rem;" onclick="toggleChat()">×</span></div>
+        <div class="chat-body" id="chatBody"><div class="msg bot-msg">👋 ¡Hola! Soy el asistente MVA. ¿En qué consultoría puedo ayudarte?</div></div>
+        <div class="chat-options"><button class="chat-btn" onclick="handleChatOption('CCTV')">Cámaras</button><button class="chat-btn" onclick="handleChatOption('Redes')">Redes</button><button class="chat-btn" onclick="handleChatOption('Soporte')">Soporte</button><button class="chat-btn" onclick="handleChatOption('Afrodesktech It')">Afrodesktech It</button></div>
+    </div>
+
+	<section id="blog" style="padding: 100px 20px; background: rgba(0,0,0,0.4); position: relative; z-index: 5;">
+    <h2 style="text-align:center; color:white; font-family:'Rajdhani'; font-size:3.5rem; margin-bottom:60px;">
+        MVA <span style="color:#00F3FF">TECH INSIGHTS</span>
+    </h2>
+    
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+        
+        <article class="news-card" style="background: rgba(15, 20, 35, 0.8); border: 1px solid rgba(0, 243, 255, 0.1); border-radius: 8px; overflow: hidden; transition: 0.4s; display: flex; flex-direction: column;">
+			<div style="height: 180px; background: url('assets/img/logo-afro.png') center/50% no-repeat; background-color: rgba(10, 25, 47, 0.9); border-bottom: 2px solid #FF003C;">
+			</div>
+    
+			<div style="padding: 25px;">
+				<span style="color: #FF003C; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">I+D / Ingeniería</span>
+				<h3 style="color: white; font-family: 'Rajdhani'; margin: 15px 0; font-size: 1.6rem;">Proyecto HORUS: Detección Térmica Aérea</h3>
+				<p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px;">Desarrollo de un sistema salva vidas basado en drones con visión calorífica para búsqueda y rescate...</p>
+				<button onclick="openModal('modal-horus')" style="background: transparent; border: 1px solid #00F3FF; color: #00F3FF; padding: 10px; cursor: pointer; font-family: 'Rajdhani'; font-weight: bold; width: 100%; transition: 0.3s;">LEER ARTÍCULO COMPLETO</button>
+			</div>
+		</article>
+
+        <article class="news-card" style="background: rgba(15, 20, 35, 0.8); border: 1px solid rgba(0, 243, 255, 0.1); border-radius: 8px; overflow: hidden; transition: 0.4s; display: flex; flex-direction: column;">
+            <div style="height: 180px; background: url('assets/img/cctv-detalle.jpg') center/cover no-repeat; border-bottom: 2px solid #D4AF37;"></div>
+            <div style="padding: 25px;">
+                <span style="color: #D4AF37; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Tecnología Preventiva</span>
+                <h3 style="color: white; font-family: 'Rajdhani'; margin: 15px 0; font-size: 1.6rem;">Inteligencia Artificial en Videovigilancia</h3>
+                <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px;">Cómo la analítica de video moderna permite detectar intrusos antes de que ocurra el incidente...</p>
+                <button onclick="openModal('modal-blog-ia')" style="background: transparent; border: 1px solid #00F3FF; color: #00F3FF; padding: 10px; cursor: pointer; font-family: 'Rajdhani'; font-weight: bold; width: 100%; transition: 0.3s;">LEER ARTÍCULO COMPLETO</button>
+            </div>
+        </article>
+
+        <article class="news-card" style="background: rgba(15, 20, 35, 0.8); border: 1px solid rgba(0, 243, 255, 0.1); border-radius: 8px; overflow: hidden; transition: 0.4s; display: flex; flex-direction: column;">
+            <div style="height: 180px; background: url('assets/img/redes-detalle.jpg') center/cover no-repeat; border-bottom: 2px solid #00F3FF;"></div>
+            <div style="padding: 25px;">
+                <span style="color: #00F3FF; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Éxito de Ingeniería</span>
+                <h3 style="color: white; font-family: 'Rajdhani'; margin: 15px 0; font-size: 1.6rem;">Infraestructura en el Sector Salud</h3>
+                <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px;">Caso práctico: Implementación de redes seguras y CCTV para una droguería local en Bogotá...</p>
+                <button onclick="openModal('modal-blog-salud')" style="background: transparent; border: 1px solid #00F3FF; color: #00F3FF; padding: 10px; cursor: pointer; font-family: 'Rajdhani'; font-weight: bold; width: 100%; transition: 0.3s;">LEER ARTÍCULO COMPLETO</button>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<div id="modal-horus" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.95); backdrop-filter:blur(8px);">
+    <div style="background:#0a0f18; margin:2% auto; padding:0; border:1px solid #D4AF37; width:90%; max-width:850px; position:relative; overflow:hidden; border-radius:8px;">
+        <span onclick="closeModal('modal-horus')" style="position:absolute; right:20px; top:15px; font-size:35px; color:#fff; cursor:pointer; z-index:100;">&times;</span>
+        
+        <div style="width:100%; height:350px; position:relative; overflow:hidden; background-color: rgba(10, 25, 47, 0.9); border-bottom: 3px solid #FF003C;">
+            <img src="img_horus.jpg" style="width:100%; height:100%; object-fit: cover; position:absolute; z-index:1;">
+            <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit: cover; position:absolute; z-index:2;">
+                <source src="assets/video/video_horus.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div style="padding:40px;">
+            <h2 style="color:#00F3FF; font-family:'Rajdhani'; font-size:2.2rem; margin-bottom:20px;">PROYECTO HORUS: ANÁLISIS TÉRMICO</h2>
+            <p style="color:#ccc; line-height:1.8; font-size:1.05rem; text-align:justify;">
+                Desarrollo de drones con sensores térmicos avanzados para identificación de firmas de calor humano. Una solución de ingeniería diseñada para salvar vidas en condiciones críticas.
+            </p>
+            <button onclick="sendToWhatsapp('Consulta: Proyecto Horus')" style="margin-top:25px; background:#8B0000; color:white; border:none; padding:12px 25px; font-family:'Rajdhani'; font-weight:bold; cursor:pointer; border-radius:4px;">SOLICITAR INFO</button>
+        </div>
+    </div>
+</div>
+
+<div id="modal-blog-ia" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.95); backdrop-filter:blur(8px);">
+    <div style="background:#0a0f18; margin:2% auto; padding:0; border:1px solid #D4AF37; width:90%; max-width:850px; position:relative; overflow:hidden; border-radius:8px;">
+        <span onclick="closeModal('modal-blog-ia')" style="position:absolute; right:20px; top:15px; font-size:35px; color:#fff; cursor:pointer; z-index:100;">&times;</span>
+        
+        <div style="width:100%; height:350px; position:relative; overflow:hidden; background-color: rgba(10, 25, 47, 0.9); border-bottom: 3px solid #D4AF37;">
+            <img src="img_ia.jpg" style="width:100%; height:100%; object-fit: cover; position:absolute; z-index:1;">
+            <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit: cover; position:absolute; z-index:2;">
+                <source src="video_ia.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div style="padding:40px;">
+            <h2 style="color:#D4AF37; font-family:'Rajdhani'; font-size:2.2rem; margin-bottom:20px;">INTELIGENCIA ARTIFICIAL EN CCTV</h2>
+            <p style="color:#ccc; line-height:1.8; font-size:1.05rem; text-align:justify;">
+                Implementación de algoritmos de analítica avanzada para detección de intrusos, reconocimiento facial y optimización de alertas preventivas en tiempo real.
+            </p>
+            <button onclick="sendToWhatsapp('Consulta: IA en Seguridad')" style="margin-top:25px; background:#8B0000; color:white; border:none; padding:12px 25px; font-family:'Rajdhani'; font-weight:bold; cursor:pointer; border-radius:4px;">VER TECNOLOGÍA</button>
+        </div>
+    </div>
+</div>
+
+<div id="modal-blog-salud" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.95); backdrop-filter:blur(8px);">
+    <div style="background:#0a0f18; margin:2% auto; padding:0; border:1px solid #D4AF37; width:90%; max-width:850px; position:relative; overflow:hidden; border-radius:8px;">
+        <span onclick="closeModal('modal-blog-salud')" style="position:absolute; right:20px; top:15px; font-size:35px; color:#fff; cursor:pointer; z-index:100;">&times;</span>
+        
+        <div style="width:100%; height:350px; position:relative; overflow:hidden; background-color: rgba(10, 25, 47, 0.9); border-bottom: 3px solid #00F3FF;">
+            <img src="img_salud.jpg" style="width:100%; height:100%; object-fit: cover; position:absolute; z-index:1;">
+            <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit: cover; position:absolute; z-index:2;">
+                <source src="video_salud.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div style="padding:40px;">
+            <h2 style="color:#00F3FF; font-family:'Rajdhani'; font-size:2.2rem; margin-bottom:20px;">INFRAESTRUCTURA SECTOR SALUD</h2>
+            <p style="color:#ccc; line-height:1.8; font-size:1.05rem; text-align:justify;">
+                Adecuación técnica de redes y seguridad electrónica para locales comerciales, combinando estética funcional con conectividad de alto rendimiento.
+            </p>
+            <button onclick="sendToWhatsapp('Consulta: Infraestructura Salud')" style="margin-top:25px; background:#8B0000; color:white; border:none; padding:12px 25px; font-family:'Rajdhani'; font-weight:bold; cursor:pointer; border-radius:4px;">ASESORÍA TÉCNICA</button>
+        </div>
+    </div>
+</div>
+
+    <footer style="text-align: center; padding: 40px 20px; background-color: #0a0f18; color: #ccc; font-family: 'Rajdhani', sans-serif; border-top: 2px solid var(--mva-gold);">
+    
+    <div style="margin-bottom: 25px;">
+        <h3 style="color:var(--mva-gold); font-family:'Rajdhani'; font-size:1.6rem; margin-bottom:10px; text-transform: uppercase;">MVA AFRODESKTECH GROUP</h3>
+        <p style="margin: 5px 0; font-size: 1.1rem;">Bogotá D.C., Colombia | Ing. Manuel Valdés Arredondo</p>
+        <p style="color:var(--neon-red); font-weight:bold; font-size:1.2rem; margin-top:10px; letter-spacing: 1px;">📞 320 638 2031</p>
+    </div>
+    
+    <div id="contacto" class="legal-block" style="border-top: 1px solid #333; padding-top: 20px; font-size: 0.9rem; color: #888; max-width: 800px; margin: 0 auto;">
+        <p style="margin-bottom: 10px;">&copy; 2026 <strong>MVA Afrodesktech Group</strong>. Todos los derechos reservados.</p>
+        
+        <p style="margin-bottom: 10px;">
+            La titularidad de la Propiedad Intelectual, código fuente, marca y estructura de servicios (CCTV, Redes, Soporte IT y Desarrollo) de este sitio web corresponden exclusivamente al <span class="legal-highlight" style="color: var(--mva-gold); font-weight: bold;">Ing. Manuel Valdés Arredondo</span>.
+        </p>
+        
+        <p style="margin-bottom: 25px;">
+            Prohibida su reproducción total o parcial sin autorización expresa, conforme a la Ley 23 de 1982 y normativa de Derechos de Autor vigente en Colombia.
+        </p>
+        
+        <nav>
+            <a href="politica-privacidad.html" style="color: #00F3FF; text-decoration: none; font-weight: bold; padding: 0 10px;">Tratamiento de Datos Personales</a> 
+            <span style="color: #555;">|</span> 
+            <a href="mailto:mvaafrodesktechgroup@gmail.com" style="color: #00F3FF; text-decoration: none; font-weight: bold; padding: 0 10px;">Contacto Corporativo</a>
+        </nav>
+    </div>
+</footer>
+
+    <script>
+        function openModal(id) { document.getElementById(id).style.display = "block"; }
+        function closeModal(id) { document.getElementById(id).style.display = "none"; }
+        function sendToWhatsapp(msg) { window.open(`https://wa.me/573206382031?text=${encodeURIComponent(msg)}`, '_blank'); }
+        function toggleChat() { var c = document.getElementById("chatWindow"); c.style.display = (c.style.display === "flex") ? "none" : "flex"; }
+        function handleChatOption(opt) {
+            var b = document.getElementById("chatBody"); var u = document.createElement("div"); u.className="msg user-msg"; u.innerText=opt; b.appendChild(u);
+            setTimeout(() => { var m=document.createElement("div"); m.className="msg bot-msg"; m.innerHTML="Te conectaré con un especialista. <br><strong>Abriendo WhatsApp...</strong>"; b.appendChild(m); b.scrollTop=b.scrollHeight; setTimeout(() => sendToWhatsapp("Hola MVA, necesito consultoría en "+opt), 1500); }, 800);
+        }
+
+        // --- MVA SCROLL LOGIC V3.0 (FUERZA BRUTA) ---
+        function bajarAlFooter() {
+            // Verificamos si la URL tiene el #contacto
+            if (window.location.hash === '#contacto') {
+                const footer = document.getElementById('contacto');
+                if (footer) {
+                    // Intento 1: Inmediato
+                    footer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Intento 2: Por si las imágenes cargan lento (reaseguro)
+                    setTimeout(() => {
+                        footer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 500); // Medio segundo después
+
+                    // Intento 3: Aseguramiento final (1 segundo después)
+                    setTimeout(() => {
+                        footer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 1000); 
+                }
+            }
+        }
+
+        // Ejecutamos la función cuando la ventana carga
+        window.addEventListener('load', bajarAlFooter);
+        
+        // Ejecutamos también si el hash cambia mientras estamos en la página
+        window.addEventListener('hashchange', bajarAlFooter);
+    </script>
+</body>
+</html>

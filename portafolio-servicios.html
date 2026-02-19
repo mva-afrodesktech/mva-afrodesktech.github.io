@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MVA Afrodesktech Group | Portafolio Digital 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Rajdhani:wght@600;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* --- CONFIGURACIÓN DE PÁGINA --- */
+        * { box-sizing: border-box; }
+        body { background: #1a1a1a; margin: 0; padding: 20px; font-family: 'Montserrat', sans-serif; }
+        
+        .page {
+            width: 210mm; height: 297mm; /* Tamaño A4 */
+            background: #19212c; 
+            margin: 0 auto 40px auto;
+            position: relative;
+            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+            padding: 60px;
+            overflow: hidden;
+            border: 1px solid #D4AF37; 
+            display: flex; flex-direction: column;
+        }
+
+        /* --- ESTILOS VISUALES --- */
+        h1, h2, h3 { font-family: 'Rajdhani', sans-serif; text-transform: uppercase; margin: 0; }
+        .gold { color: #D4AF37; }
+        .neon-blue { color: #00F3FF; }
+        .neon-red { color: #FF003C; }
+        
+        .bg-tech {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-image: linear-gradient(rgba(2, 4, 10, 0.85), rgba(2, 4, 10, 0.85)), url('assets/img/fondo-tecnologico.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 1; 
+        }
+        .content { position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; }
+
+        /* --- PORTADA --- */
+        .cover-content { text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        
+        .big-logo { 
+            width: 240px; height: 240px; 
+            border: 3px solid #D4AF37; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; 
+            margin-bottom: 40px; box-shadow: 0 0 40px rgba(212,175,55,0.4); 
+            overflow: hidden; background: rgba(255,255,255,0.02);
+        }
+        .big-logo img { width: 85%; height: 85%; object-fit: contain; }
+
+        .cover-title { font-size: 3.8rem; line-height: 0.9; margin-bottom: 15px; color: white; letter-spacing: 5px; font-weight: 800; }
+        .cover-subtitle { font-size: 1.3rem; color: #00F3FF; letter-spacing: 4px; margin-bottom: 60px; font-weight: 600; }
+        .slogan-box { border-top: 1px solid #D4AF37; padding-top: 25px; width: 90%; color: #ddd; font-style: italic; font-size: 1.1rem; }
+
+        /* --- CUERPO --- */
+        .page-header { border-bottom: 3px solid #FF003C; padding-bottom: 20px; margin-bottom: 45px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .page-title { font-size: 2.8rem; color: white; font-weight: 800; }
+        .page-number { color: rgba(212, 175, 55, 0.2); font-size: 5rem; font-weight: 800; font-family: 'Rajdhani'; line-height: 1; }
+        
+        .service-box { display: flex; gap: 35px; margin-bottom: 50px; align-items: flex-start; }
+        .service-icon { font-size: 3.5rem; color: #D4AF37; min-width: 90px; text-align: center; filter: drop-shadow(0 0 10px rgba(212,175,55,0.3)); }
+        .service-text h3 { color: #00F3FF; font-size: 1.8rem; margin-bottom: 12px; letter-spacing: 1px; }
+        .service-text p { color: #ccc; font-size: 1.05rem; line-height: 1.6; margin-bottom: 15px; text-align: justify; }
+        
+        .feature-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .feature-list li { color: #eee; display: flex; align-items: center; gap: 12px; font-size: 0.95rem; }
+        .feature-list li i { color: #FF003C; font-size: 0.9rem; }
+
+        /* --- CONTRAPORTADA --- */
+        .contact-grid { background: rgba(255,255,255,0.03); padding: 50px; border-left: 6px solid #00F3FF; margin: 40px 0; border-radius: 0 15px 15px 0; }
+        .contact-item { display: flex; align-items: center; gap: 25px; margin-bottom: 30px; }
+        .contact-item i { width: 50px; height: 50px; background: #D4AF37; color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+        .contact-info div:first-child { font-size: 0.85rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+        .contact-info div:last-child { font-size: 1.3rem; color: white; font-weight: 600; }
+
+        .qr-section { display: flex; gap: 60px; justify-content: center; margin-top: 20px; }
+        .qr-box img { width: 140px; height: 140px; border: 6px solid white; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .qr-label { margin-top: 15px; color: #00F3FF; font-family: 'Rajdhani'; font-weight: 800; font-size: 1rem; letter-spacing: 1px; text-align: center;}
+
+        /* --- BOTÓN IMPRESIÓN --- */
+        .print-control { position: fixed; top: 30px; right: 30px; z-index: 1000; }
+        .btn-print { padding: 18px 35px; background: #FF003C; color: white; border: none; border-radius: 50px; font-family: 'Rajdhani'; font-weight: 800; font-size: 1.2rem; cursor: pointer; box-shadow: 0 10px 20px rgba(255,0,60,0.4); transition: 0.3s; text-transform: uppercase; }
+        .btn-print:hover { transform: scale(1.05); background: white; color: #FF003C; }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .page { margin: 0; border: none; box-shadow: none; page-break-after: always; }
+            .print-control { display: none; }
+        }
+        
+        .footer-principal {
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            padding-top: 15px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center;     
+            text-align: center;      
+        }
+
+        .footer-content p {
+            margin: 2px 0;
+            color: #888;
+            font-size: 10px;
+        }
+
+        .legal-highlight {
+            color: #D4AF37;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="print-control">
+        <button class="btn-print" onclick="window.print()">📥 DESCARGAR PORTAFOLIO PDF</button>
+    </div>
+
+    <div class="page">
+        <div class="bg-tech"></div>
+        <div class="content cover-content">
+            <div class="big-logo">
+                <img src="assets/img/logo-afro.png" alt="Logo MVA">
+            </div>
+            <h1 class="cover-title">MVA<br><span class="gold">AFRODESKTECH</span><br>GROUP</h1>
+            <div class="cover-subtitle">INGENIERÍA | INFRAESTRUCTURA | SEGURIDAD</div>
+            <div class="slogan-box">
+                "Ingeniería que transforma, tecnología que conecta."
+            </div>      
+        </div>
+        <div style="text-align: center; color: #444; font-size: 0.9rem; letter-spacing: 2px; position: relative; z-index: 10;">DOCUMENTO CORPORATIVO © 2026</div>
+    </div>
+
+    <div class="page">
+        <div class="bg-tech"></div>
+        <div class="content">
+            <div class="page-header">
+                <h2 class="page-title">SOLUCIONES <span class="gold">PROFESIONALES Y TÉCNICAS</span></h2>
+                <span class="page-number">01</span>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon"><i class="fas fa-video"></i></div>
+                <div class="service-text">
+                    <h3>SEGURIDAD ELECTRÓNICA & CCTV</h3>
+                    <p>Implementación de ecosistemas de vigilancia inteligente. Grabación en alta definición con analítica de movimiento y acceso global inmediato.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-caret-right"></i> Cámaras IP 4K / PTZ</li>
+                        <li><i class="fas fa-caret-right"></i> Reconocimiento Facial</li>
+                        <li><i class="fas fa-caret-right"></i> Apps de Monitoreo Remoto</li>
+                        <li><i class="fas fa-caret-right"></i> Mantenimiento Preventivo y Correctivo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                <div class="service-text">
+                    <h3>INFRAESTRUCTURA DE RED</h3>
+                    <p>Construimos autopistas digitales: Redes escalables, seguras y certificadas para el crecimiento de su negocio.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-caret-right"></i> Cableado Estructurado y Certificación</li>
+                        <li><i class="fas fa-caret-right"></i> Networking y Gestión de Tráfico</li>
+                        <li><i class="fas fa-caret-right"></i> Gestión de Racks IT</li>
+                        <li><i class="fas fa-caret-right"></i> Auditoría y Seguridad Perimetral</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="flex-grow: 1;"></div>
+            
+            <footer class="footer-principal">
+                <div class="footer-content">
+                    <p>© 2026 <strong>MVA Afrodesktech Group</strong>. Todos los derechos reservados.</p>
+                    <p>La titularidad de la Propiedad Intelectual, código fuente y marca corresponden exclusivamente al <span class="legal-highlight">Ing. Manuel Valdés Arredondo</span>.</p>
+                    <p>Prohibida su reproducción total o parcial sin autorización expresa, conforme a la Ley 23 de 1982 en Colombia.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+    <div class="page">
+        <div class="bg-tech"></div>
+        <div class="content">
+            <div class="page-header">
+                <h2 class="page-title">SOLUCIONES <span class="gold">PROFESIONALES Y TÉCNICAS</span></h2>
+                <span class="page-number">02</span>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                <div class="service-text">
+                    <h3>SOPORTE IT</h3>
+                    <p>Respaldo técnico integral. Aseguramos la continuidad de su negocio mediante la optimización de sus recursos tecnológicos.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-caret-right"></i> Hardware Windows / Mac</li>
+                        <li><i class="fas fa-caret-right"></i> Optimización de Sistemas</li>
+                        <li><i class="fas fa-caret-right"></i> Backups de Seguridad</li>
+                        <li><i class="fas fa-caret-right"></i> Mesa de Ayuda (Help Desk)</li>
+                        <li><i class="fas fa-caret-right"></i> Soporte Remoto y On-site</li>
+                        <li><i class="fas fa-caret-right"></i> Administración de Software</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="service-box">
+                <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+                <div class="service-text">
+                    <h3>AFRODESKTECH IT: CONSULTORÍA Y DESARROLLO A MEDIDA</h3>
+                    <p>Desarrollo de software a medida, auditoría de sistemas y consultoría estratégica.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-caret-right"></i> Desarrollo de Software a Medida</li>
+                        <li><i class="fas fa-caret-right"></i> Auditoría de Sistemas</li>
+                        <li><i class="fas fa-caret-right"></i> Consultoría Estratégica</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="flex-grow: 1;"></div>
+            
+            <footer class="footer-principal">
+                <div class="footer-content">
+                    <p>© 2026 <strong>MVA Afrodesktech Group</strong>. Todos los derechos reservados.</p>
+                    <p>La titularidad de la Propiedad Intelectual, código fuente y marca corresponden exclusivamente al <span class="legal-highlight">Ing. Manuel Valdés Arredondo</span>.</p>
+                    <p>Prohibida su reproducción total o parcial sin autorización expresa, conforme a la Ley 23 de 1982 en Colombia.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+    <div class="page" id="seccion-legal">
+        <div class="bg-tech"></div>
+        <div class="content">
+            <div class="page-header">
+                <h2 class="page-title">MARCO <span class="gold">LEGAL</span></h2>
+                <span class="page-number">03</span>
+            </div>
+
+            <div style="background: rgba(212, 175, 55, 0.05); border: 1px solid rgba(212, 175, 55, 0.3); padding: 35px; border-radius: 15px;">
+                <h3 style="color: #D4AF37; font-family: 'Rajdhani'; margin-bottom: 20px; font-size: 1.6rem;">
+                    <i class="fas fa-user-shield"></i> POLÍTICA DE TRATAMIENTO DE DATOS
+                </h3>
+                
+                <div style="color: #ddd; font-size: 0.95rem; line-height: 1.6; text-align: justify;">
+                    <p>En cumplimiento de la <strong>Ley 1581 de 2012</strong> y el Decreto 1377 de 2013 de la República de Colombia.</p>
+                    
+                    <h4 style="color: #00F3FF; margin: 15px 0 10px 0;">1. Identificación del Responsable</h4>
+                    <p>El responsable del tratamiento de sus datos es <span class="gold" style="font-weight: bold;">Manuel Valdés Arredondo</span>, operando como <span class="gold" style="font-weight: bold;">MVA AFRODESKTECH GROUP</span>, con sede principal en Bogotá D.C.</p>
+                    
+                    <h4 style="color: #00F3FF; margin: 15px 0 10px 0;">2. Finalidad de los Datos</h4>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li><i class="fas fa-check gold" style="font-size: 0.7rem; margin-right: 10px;"></i> Gestión técnica de servicios de CCTV e infraestructura de red.</li>
+                        <li><i class="fas fa-check gold" style="font-size: 0.7rem; margin-right: 10px;"></i> Emisión de cotizaciones y soporte técnico especializado.</li>
+                        <li><i class="fas fa-check gold" style="font-size: 0.7rem; margin-right: 10px;"></i> Comunicación directa sobre el estado de sus proyectos de ingeniería.</li>
+                    </ul>
+                    
+                    <h4 style="color: #00F3FF; margin: 15px 0 10px 0;">3. Derechos del Usuario</h4>
+                    <p style="margin-top: 20px; border-left: 3px solid #FF003C; padding-left: 15px; font-style: italic; background: rgba(255,255,255,0.02); padding: 15px;">
+                        Como titular, usted tiene derecho a conocer, actualizar y rectificar sus datos a través de nuestro canal corporativo: 
+                        <br><span class="gold" style="font-weight: bold;">mvaafrodesktechgroup@gmail.com</span>
+                    </p>
+                    
+                    <h4 style="color: #00F3FF; margin: 15px 0 10px 0;">4. Seguridad Técnica</h4>
+                    <p>Como empresa de ingeniería, implementamos protocolos de cifrado y seguridad administrativa para garantizar que su información no sea adulterada ni consultada por terceros no autorizados.</p>
+                </div>
+            </div>
+            
+            <div style="flex-grow: 1;"></div>
+                        
+            <footer class="footer-principal">
+                <div class="footer-content">
+                    <p>© 2026 <strong>MVA Afrodesktech Group</strong>. Todos los derechos reservados.</p>
+                    <p>La titularidad de la Propiedad Intelectual, código fuente y marca corresponden exclusivamente al <span class="legal-highlight">Ing. Manuel Valdés Arredondo</span>.</p>
+                    <p>Prohibida su reproducción total o parcial sin autorización expresa, conforme a la Ley 23 de 1982 en Colombia.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+    <div class="page">
+        <div class="bg-tech"></div>
+        <div class="content cover-content">
+            <h2 class="cover-title" style="font-size: 3rem; margin-top: 40px;">HABLEMOS DE<br><span class="neon-blue">SU PROYECTO</span></h2>
+            
+            <div class="contact-item" style="margin-top: 30px;">
+                <i class="fas fa-star"></i>
+                <div class="contact-info">
+                    <div>Sede Principal</div>
+                    <div style="color: #D4AF37;">Bogotá D.C., Colombia</div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 25px; width: 100%; max-width: 600px;">
+                <div class="contact-item" style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 8px; margin-bottom: 0;">
+                    <i class="fas fa-map-marker-alt" style="width: 35px; height: 35px; font-size: 1rem;"></i>
+                    <div class="contact-info">
+                        <div>Antioquia</div>
+                        <div>Sede Medellín</div>
+                    </div>
+                </div>
+                    
+                <div class="contact-item" style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 8px; margin-bottom: 0;">
+                    <i class="fas fa-map-marker-alt" style="width: 35px; height: 35px; font-size: 1rem;"></i>
+                    <div class="contact-info">
+                        <div>Chocó</div>
+                        <div>Sede Quibdó</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-grid" style="width: 100%; max-width: 600px;">
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div class="contact-info">
+                        <div>Atención Inmediata</div>
+                        <div>+57 320 638 20 31</div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-info">
+                        <div>Correo Corporativo</div>
+                        <div style="font-size: 1.1rem !important;">mvaafrodesktechgroup@gmail.com</div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <div class="contact-info">
+                        <div>Plataforma Web</div>
+                        <div style="color: #00F3FF;">mva-afrodesktech.github.io</div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="qr-section">
+                <div class="qr-box">
+                    <img src="assets/img/qrweb.png" alt="QR Web">
+                    <div class="qr-label">SCAN ME</div>
+                </div>
+                <div class="qr-box">
+                    <img src="assets/img/qrwhatsapp.png" alt="QR WhatsApp">
+                    <div class="qr-label">CHARLA CONMIGO</div>
+                </div>
+            </div>
+            
+            <div style="flex-grow: 1;"></div>
+            
+            <footer class="footer-principal">
+                <div class="footer-content">
+                    <p>© 2026 <strong>MVA Afrodesktech Group</strong>. Todos los derechos reservados.</p>
+                    <p>La titularidad de la Propiedad Intelectual, código fuente y marca corresponden exclusivamente al <span class="legal-highlight">Ing. Manuel Valdés Arredondo</span>.</p>
+                    <p>Prohibida su reproducción total o parcial sin autorización expresa, conforme a la Ley 23 de 1982 en Colombia.</p>
+                </div>
+            </footer>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
