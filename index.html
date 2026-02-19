@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z00NXKZVKT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Z00NXKZVKT');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z00NXKZVKT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z00NXKZVKT');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="google-site-verification" content="QwPoPK2H2lW7_viTc79D8z0eV8ElMoOrPbzdqNYvmYU" />
@@ -21,7 +20,8 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="MVA Afrodesktech Group | Ingeniería de Autor">
     <meta property="og:description" content="Soluciones integrales en Tecnología, Seguridad Electrónica e Infraestructura. Precisión técnica y compromiso real.">
-    <meta property="og:image" content="image_2.png"> <link rel="icon" type="image/png" href="logo-afro.png">
+    <meta property="og:image" content="image_2.png"> 
+    <link rel="icon" type="image/png" href="logo-afro.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Rajdhani:wght@600;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -189,13 +189,13 @@
             object-fit: cover;  /* Para que no se estire ni se deforme */
             padding: 5px;       /* Un pequeño espacio para que no toque el borde dorado */
         }
-		
-		.news-card:hover {
-			transform: translateY(-10px);
-			border-color: #00F3FF !important;
-			box-shadow: 0 10px 40px rgba(0, 243, 255, 0.2);
-		}
-		
+        
+        .news-card:hover {
+            transform: translateY(-10px);
+            border-color: #00F3FF !important;
+            box-shadow: 0 10px 40px rgba(0, 243, 255, 0.2);
+        }
+        
     </style>
 </head>
 <body>
@@ -248,12 +248,12 @@
                 <p>Conjunto Residencial Senderos de la Estancia 2</p>
                 <p style="color:#777; font-size:0.8rem; margin-top:10px;">Ing. Manuel Valdés Arredondo</p>
             </div>
-			<div class="location-card">
+            <div class="location-card">
                 <h4>📍 NUESTRAS SEDES | MEDELLÍN - ANTIOQUIA</h4>
                 <p>Carrera 79A # 77BB - 100</p>
                 <p style="color:#777; font-size:0.8rem; margin-top:10px;">Fundada: 2020 | Ing. Manuel Valdés Arredondo</p>
             </div>
-			<div class="location-card">
+            <div class="location-card">
                 <h4>📍 NUESTRAS SEDES | QUIBDÓ - CHOCÓ</h4>
                 <p>Calle 25A # 10 - 81</p>
                 <p style="color:#777; font-size:0.8rem; margin-top:10px;">Fundada: 2020 | Ing. Manuel Valdés Arredondo</p>
@@ -278,128 +278,129 @@
             <div class="nexus-card"><span class="icon"><i class="fas fa-eye"></i></span><h3>SEGURIDAD ELECTRÓNICA & CCTV</h3><p>Implementación de ecosistemas de vigilancia inteligente. Grabación en alta definición con analítica de movimiento y acceso global inmediato.</p><button class="card-btn" onclick="openModal('modal-cctv')">VER DETALLES</button></div>
             <div class="nexus-card"><span class="icon"><i class="fas fa-network-wired"></i></span><h3>INFRAESTRUCTURA DE RED</h3><p>Construimos autopistas digitales: Redes escalables, seguras y certificadas para el crecimiento de su negocio.</p><button class="card-btn" onclick="openModal('modal-redes')">VER DETALLES</button></div>
             <div class="nexus-card"><span class="icon"><i class="fas fa-laptop-code"></i></span><h3>SOPORTE IT</h3><p>Respaldo técnico integral. Aseguramos la continuidad de su negocio mediante la optimización de sus recursos tecnológicos.</p><button class="card-btn" onclick="openModal('modal-soporte')">VER DETALLES</button></div>
-			<div class="nexus-card"><span class="icon"><i class="fas fa-user-tie"></i></span><h3>AFRODESKTECH IT: CONSULTORÍA Y DESARROLLO A MEDIDA</h3><p>Desarrollo de software a medida, auditoría de sistemas y consultoría estratégica.</p><button class="card-btn" onclick="openModal('modal-consulta')">VER DETALLES</button></div>
+            <div class="nexus-card"><span class="icon"><i class="fas fa-user-tie"></i></span><h3>AFRODESKTECH IT: CONSULTORÍA Y DESARROLLO A MEDIDA</h3><p>Desarrollo de software a medida, auditoría de sistemas y consultoría estratégica.</p><button class="card-btn" onclick="openModal('modal-consulta')">VER DETALLES</button></div>
         </div>
     </section>
 
     <div id="modal-cctv" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('modal-cctv')">×</span><div class="modal-body"><img src="assets/img/cctv-detalle.jpg" class="modal-img"><div class="modal-info"><h4>DETALLES CCTV:</h4><ul><li>Cámaras IP / PTZ Inteligentes.</li><li>Analítica de video avanzada.</li><li>Acceso remoto App Móvil.</li></ul><button class="btn btn-red" onclick="sendToWhatsapp('Cotización CCTV')">COTIZAR</button></div></div></div></div>
     <div id="modal-redes" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('modal-redes')">×</span><div class="modal-body"><img src="assets/img/redes_detalle.png" class="modal-img"><div class="modal-info"><h4>DETALLES REDES:</h4><ul><li>Cableado Estructurado y Certificación.</li><li>Networking y Gestión de Tráfico.</li><li>Gestión de Racks IT.</li><li>Auditoría y Seguridad Perimetral.</li></ul><button class="btn btn-red" onclick="sendToWhatsapp('Cotización Redes')">COTIZAR</button></div></div></div></div>
     <div id="modal-soporte" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('modal-soporte')">×</span><div class="modal-body"><img src="assets/img/soporte-detalle.jpg" class="modal-img"><div class="modal-info"><h4>DETALLES SOPORTE IT:</h4><ul><li>Hardware Windows/Mac.</li><li>Optimización de Sistemas.</li><li>Backups de Seguridad.</li><li>Mesa de Ayuda (Help Desk).</li><li>Soporte Remoto y On-site.</li><li>Administración de Software.</li></ul><button class="btn btn-red" onclick="sendToWhatsapp('Cotización Soporte')">COTIZAR</button></div></div></div></div>
-	<div id="modal-consulta" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('modal-consulta')">×</span><div class="modal-body"><img src="assets/img/desarrollo.png" class="modal-img"><div class="modal-info"><h4>DETALLES AFRODESKTECH IT:</h4><ul><li>Desarrollo de Software a Medida.</li><li>Auditoría de Sistemas.</li><li>Consultoría Estratégica.</li></ul><button class="btn btn-red" onclick="sendToWhatsapp('Cotización Soporte')">COTIZAR</button></div></div></div></div>
-	
+    <div id="modal-consulta" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('modal-consulta')">×</span><div class="modal-body"><img src="assets/img/desarrollo.png" class="modal-img"><div class="modal-info"><h4>DETALLES AFRODESKTECH IT:</h4><ul><li>Desarrollo de Software a Medida.</li><li>Auditoría de Sistemas.</li><li>Consultoría Estratégica.</li></ul><button class="btn btn-red" onclick="sendToWhatsapp('Cotización Soporte')">COTIZAR</button></div></div></div></div>
+    
     <div class="chat-trigger" onclick="toggleChat()">
-    <img src="assets/img/logo-afro.png" alt="Chat MVA" class="chat-icon-img">
-</div>
+        <img src="assets/img/logo-afro.png" alt="Chat MVA" class="chat-icon-img">
+    </div>
     <div class="chat-window" id="chatWindow">
         <div class="chat-header"><h3><div class="status-dot"></div> MVA BOT</h3><span style="cursor:pointer; font-size:1.5rem;" onclick="toggleChat()">×</span></div>
         <div class="chat-body" id="chatBody"><div class="msg bot-msg">👋 ¡Hola! Soy el asistente MVA. ¿En qué consultoría puedo ayudarte?</div></div>
         <div class="chat-options"><button class="chat-btn" onclick="handleChatOption('CCTV')">Cámaras</button><button class="chat-btn" onclick="handleChatOption('Redes')">Redes</button><button class="chat-btn" onclick="handleChatOption('Soporte')">Soporte</button><button class="chat-btn" onclick="handleChatOption('Afrodesktech It')">Afrodesktech It</button></div>
     </div>
 
-	<section id="blog" style="padding: 100px 20px; background: rgba(0,0,0,0.4); position: relative; z-index: 5;">
-    <h2 style="text-align:center; color:white; font-family:'Rajdhani'; font-size:3.5rem; margin-bottom:60px;">
-        MVA <span style="color:#00F3FF">TECH INSIGHTS</span>
-    </h2>
-    
-    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+    <section id="blog" style="padding: 100px 20px; background: rgba(0,0,0,0.4); position: relative; z-index: 5;">
+        <h2 style="text-align:center; color:white; font-family:'Rajdhani'; font-size:3.5rem; margin-bottom:60px;">
+            MVA <span style="color:#00F3FF">TECH INSIGHTS</span>
+        </h2>
         
-        <article class="news-card" style="background: rgba(15, 20, 35, 0.8); border: 1px solid rgba(0, 243, 255, 0.1); border-radius: 8px; overflow: hidden; transition: 0.4s; display: flex; flex-direction: column;">
-			<div style="height: 180px; background: url('assets/img/logo-afro.png') center/50% no-repeat; background-color: rgba(10, 25, 47, 0.9); border-bottom: 2px solid #FF003C;">
-			</div>
-    
-			<div style="padding: 25px;">
-				<span style="color: #FF003C; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">I+D / Ingeniería</span>
-				<h3 style="color: white; font-family: 'Rajdhani'; margin: 15px 0; font-size: 1.6rem;">Proyecto HORUS: Detección Térmica Aérea</h3>
-				<p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px;">Desarrollo de un sistema salva vidas basado en drones con visión calorífica para búsqueda y rescate...</p>
-				<button onclick="openModal('modal-horus')" style="background: transparent; border: 1px solid #00F3FF; color: #00F3FF; padding: 10px; cursor: pointer; font-family: 'Rajdhani'; font-weight: bold; width: 100%; transition: 0.3s;">LEER ARTÍCULO COMPLETO</button>
-			</div>
-		</article>
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+            
+            <article class="news-card" style="background: rgba(15, 20, 35, 0.8); border: 1px solid rgba(0, 243, 255, 0.1); border-radius: 8px; overflow: hidden; transition: 0.4s; display: flex; flex-direction: column;">
+                <div style="height: 180px; background: url('assets/img/logo-afro.png') center/50% no-repeat; background-color: rgba(10, 25, 47, 0.9); border-bottom: 2px solid #FF003C;">
+                </div>
+        
+                <div style="padding: 25px;">
+                    <span style="color: #FF003C; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">I+D / Ingeniería</span>
+                    <h3 style="color: white; font-family: 'Rajdhani'; margin: 15px 0; font-size: 1.6rem;">Proyecto HORUS: Detección Térmica Aérea</h3>
+                    <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px;">Desarrollo de un sistema salva vidas basado en drones con visión calorífica para búsqueda y rescate...</p>
+                    <button onclick="openModal('modal-horus')" style="background: transparent; border: 1px solid #00F3FF; color: #00F3FF; padding: 10px; cursor: pointer; font-family: 'Rajdhani'; font-weight: bold; width: 100%; transition: 0.3s;">LEER ARTÍCULO COMPLETO</button>
+                </div>
+            </article>
 
-        <article class="news-card" style="background: rgba(15, 20, 35, 0.8); border: 1px solid rgba(0, 243, 255, 0.1); border-radius: 8px; overflow: hidden; transition: 0.4s; display: flex; flex-direction: column;">
-            <div style="height: 180px; background: url('assets/img/cctv-detalle.jpg') center/cover no-repeat; border-bottom: 2px solid #D4AF37;"></div>
-            <div style="padding: 25px;">
-                <span style="color: #D4AF37; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Tecnología Preventiva</span>
-                <h3 style="color: white; font-family: 'Rajdhani'; margin: 15px 0; font-size: 1.6rem;">Inteligencia Artificial en Videovigilancia</h3>
-                <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px;">Cómo la analítica de video moderna permite detectar intrusos antes de que ocurra el incidente...</p>
-                <button onclick="openModal('modal-blog-ia')" style="background: transparent; border: 1px solid #00F3FF; color: #00F3FF; padding: 10px; cursor: pointer; font-family: 'Rajdhani'; font-weight: bold; width: 100%; transition: 0.3s;">LEER ARTÍCULO COMPLETO</button>
+            <article class="news-card" style="background: rgba(15, 20, 35, 0.8); border: 1px solid rgba(0, 243, 255, 0.1); border-radius: 8px; overflow: hidden; transition: 0.4s; display: flex; flex-direction: column;">
+                <div style="height: 180px; background: url('assets/img/cctv-detalle.jpg') center/cover no-repeat; border-bottom: 2px solid #D4AF37;"></div>
+                <div style="padding: 25px;">
+                    <span style="color: #D4AF37; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Tecnología Preventiva</span>
+                    <h3 style="color: white; font-family: 'Rajdhani'; margin: 15px 0; font-size: 1.6rem;">Inteligencia Artificial en Videovigilancia</h3>
+                    <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px;">Cómo la analítica de video moderna permite detectar intrusos antes de que ocurra el incidente...</p>
+                    <button onclick="openModal('modal-blog-ia')" style="background: transparent; border: 1px solid #00F3FF; color: #00F3FF; padding: 10px; cursor: pointer; font-family: 'Rajdhani'; font-weight: bold; width: 100%; transition: 0.3s;">LEER ARTÍCULO COMPLETO</button>
+                </div>
+            </article>
+
+            <article class="news-card" style="background: rgba(15, 20, 35, 0.8); border: 1px solid rgba(0, 243, 255, 0.1); border-radius: 8px; overflow: hidden; transition: 0.4s; display: flex; flex-direction: column;">
+                <div style="height: 180px; background: url('assets/img/redes-detalle.jpg') center/cover no-repeat; border-bottom: 2px solid #00F3FF;"></div>
+                <div style="padding: 25px;">
+                    <span style="color: #00F3FF; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Éxito de Ingeniería</span>
+                    <h3 style="color: white; font-family: 'Rajdhani'; margin: 15px 0; font-size: 1.6rem;">Infraestructura en el Sector Salud</h3>
+                    <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px;">Caso práctico: Implementación de redes seguras y CCTV para una droguería local en Bogotá...</p>
+                    <button onclick="openModal('modal-blog-salud')" style="background: transparent; border: 1px solid #00F3FF; color: #00F3FF; padding: 10px; cursor: pointer; font-family: 'Rajdhani'; font-weight: bold; width: 100%; transition: 0.3s;">LEER ARTÍCULO COMPLETO</button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <div id="modal-horus" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.95); backdrop-filter:blur(8px);">
+        <div style="background:#0a0f18; margin:2% auto; padding:0; border:1px solid #D4AF37; width:90%; max-width:850px; position:relative; overflow:hidden; border-radius:8px;">
+            <span onclick="closeModal('modal-horus')" style="position:absolute; right:20px; top:15px; font-size:35px; color:#fff; cursor:pointer; z-index:100;">×</span>
+            
+            <div style="width:100%; height:0; padding-bottom: 56.25%; position:relative; background-color: #000; border-bottom: 3px solid #FF003C;">
+                <iframe 
+                    style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
+                    src="https://www.youtube.com/embed/9LcIEmjR0MI?rel=0" 
+                    title="MVA Proyecto Horus" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
             </div>
-        </article>
 
-        <article class="news-card" style="background: rgba(15, 20, 35, 0.8); border: 1px solid rgba(0, 243, 255, 0.1); border-radius: 8px; overflow: hidden; transition: 0.4s; display: flex; flex-direction: column;">
-            <div style="height: 180px; background: url('assets/img/redes-detalle.jpg') center/cover no-repeat; border-bottom: 2px solid #00F3FF;"></div>
-            <div style="padding: 25px;">
-                <span style="color: #00F3FF; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Éxito de Ingeniería</span>
-                <h3 style="color: white; font-family: 'Rajdhani'; margin: 15px 0; font-size: 1.6rem;">Infraestructura en el Sector Salud</h3>
-                <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px;">Caso práctico: Implementación de redes seguras y CCTV para una droguería local en Bogotá...</p>
-                <button onclick="openModal('modal-blog-salud')" style="background: transparent; border: 1px solid #00F3FF; color: #00F3FF; padding: 10px; cursor: pointer; font-family: 'Rajdhani'; font-weight: bold; width: 100%; transition: 0.3s;">LEER ARTÍCULO COMPLETO</button>
+            <div style="padding:40px;">
+                <h2 style="color:#00F3FF; font-family:'Rajdhani'; font-size:2.2rem; margin-bottom:20px;">PROYECTO HORUS: ANÁLISIS TÉRMICO</h2>
+                <p style="color:#ccc; line-height:1.8; font-size:1.05rem; text-align:justify;">
+                    Desarrollo de drones con sensores térmicos avanzados para identificación de firmas de calor humano. Una solución de ingeniería diseñada para salvar vidas en condiciones críticas.
+                </p>
+                <button onclick="sendToWhatsapp('Consulta: Proyecto Horus')" style="margin-top:25px; background:#8B0000; color:white; border:none; padding:12px 25px; font-family:'Rajdhani'; font-weight:bold; cursor:pointer; border-radius:4px;">SOLICITAR INFO</button>
             </div>
-        </article>
-
-    </div>
-</section>
-
-<div id="modal-horus" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.95); backdrop-filter:blur(8px);">
-    <div style="background:#0a0f18; margin:2% auto; padding:0; border:1px solid #D4AF37; width:90%; max-width:850px; position:relative; overflow:hidden; border-radius:8px;">
-        <span onclick="closeModal('modal-horus')" style="position:absolute; right:20px; top:15px; font-size:35px; color:#fff; cursor:pointer; z-index:100;">&times;</span>
-        
-        <div style="width:100%; height:350px; position:relative; overflow:hidden; background-color: rgba(10, 25, 47, 0.9); border-bottom: 3px solid #FF003C;">
-            <img src="img_horus.jpg" style="width:100%; height:100%; object-fit: cover; position:absolute; z-index:1;">
-            <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit: cover; position:absolute; z-index:2;">
-                <source src="assets/video/video_horus.mp4" type="video/mp4">
-            </video>
-        </div>
-
-        <div style="padding:40px;">
-            <h2 style="color:#00F3FF; font-family:'Rajdhani'; font-size:2.2rem; margin-bottom:20px;">PROYECTO HORUS: ANÁLISIS TÉRMICO</h2>
-            <p style="color:#ccc; line-height:1.8; font-size:1.05rem; text-align:justify;">
-                Desarrollo de drones con sensores térmicos avanzados para identificación de firmas de calor humano. Una solución de ingeniería diseñada para salvar vidas en condiciones críticas.
-            </p>
-            <button onclick="sendToWhatsapp('Consulta: Proyecto Horus')" style="margin-top:25px; background:#8B0000; color:white; border:none; padding:12px 25px; font-family:'Rajdhani'; font-weight:bold; cursor:pointer; border-radius:4px;">SOLICITAR INFO</button>
         </div>
     </div>
-</div>
 
-<div id="modal-blog-ia" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.95); backdrop-filter:blur(8px);">
-    <div style="background:#0a0f18; margin:2% auto; padding:0; border:1px solid #D4AF37; width:90%; max-width:850px; position:relative; overflow:hidden; border-radius:8px;">
-        <span onclick="closeModal('modal-blog-ia')" style="position:absolute; right:20px; top:15px; font-size:35px; color:#fff; cursor:pointer; z-index:100;">&times;</span>
-        
-        <div style="width:100%; height:350px; position:relative; overflow:hidden; background-color: rgba(10, 25, 47, 0.9); border-bottom: 3px solid #D4AF37;">
-            <img src="img_ia.jpg" style="width:100%; height:100%; object-fit: cover; position:absolute; z-index:1;">
-            <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit: cover; position:absolute; z-index:2;">
-                <source src="video_ia.mp4" type="video/mp4">
-            </video>
-        </div>
+    <div id="modal-blog-ia" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.95); backdrop-filter:blur(8px);">
+        <div style="background:#0a0f18; margin:2% auto; padding:0; border:1px solid #D4AF37; width:90%; max-width:850px; position:relative; overflow:hidden; border-radius:8px;">
+            <span onclick="closeModal('modal-blog-ia')" style="position:absolute; right:20px; top:15px; font-size:35px; color:#fff; cursor:pointer; z-index:100;">×</span>
+            
+            <div style="width:100%; height:350px; position:relative; overflow:hidden; background-color: rgba(10, 25, 47, 0.9); border-bottom: 3px solid #D4AF37;">
+                <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit: cover; position:absolute; z-index:2;">
+                    <source src="video_ia.mp4" type="video/mp4">
+                </video>
+            </div>
 
-        <div style="padding:40px;">
-            <h2 style="color:#D4AF37; font-family:'Rajdhani'; font-size:2.2rem; margin-bottom:20px;">INTELIGENCIA ARTIFICIAL EN CCTV</h2>
-            <p style="color:#ccc; line-height:1.8; font-size:1.05rem; text-align:justify;">
-                Implementación de algoritmos de analítica avanzada para detección de intrusos, reconocimiento facial y optimización de alertas preventivas en tiempo real.
-            </p>
-            <button onclick="sendToWhatsapp('Consulta: IA en Seguridad')" style="margin-top:25px; background:#8B0000; color:white; border:none; padding:12px 25px; font-family:'Rajdhani'; font-weight:bold; cursor:pointer; border-radius:4px;">VER TECNOLOGÍA</button>
-        </div>
-    </div>
-</div>
-
-<div id="modal-blog-salud" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.95); backdrop-filter:blur(8px);">
-    <div style="background:#0a0f18; margin:2% auto; padding:0; border:1px solid #D4AF37; width:90%; max-width:850px; position:relative; overflow:hidden; border-radius:8px;">
-        <span onclick="closeModal('modal-blog-salud')" style="position:absolute; right:20px; top:15px; font-size:35px; color:#fff; cursor:pointer; z-index:100;">&times;</span>
-        
-        <div style="width:100%; height:350px; position:relative; overflow:hidden; background-color: rgba(10, 25, 47, 0.9); border-bottom: 3px solid #00F3FF;">
-            <img src="img_salud.jpg" style="width:100%; height:100%; object-fit: cover; position:absolute; z-index:1;">
-            <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit: cover; position:absolute; z-index:2;">
-                <source src="video_salud.mp4" type="video/mp4">
-            </video>
-        </div>
-
-        <div style="padding:40px;">
-            <h2 style="color:#00F3FF; font-family:'Rajdhani'; font-size:2.2rem; margin-bottom:20px;">INFRAESTRUCTURA SECTOR SALUD</h2>
-            <p style="color:#ccc; line-height:1.8; font-size:1.05rem; text-align:justify;">
-                Adecuación técnica de redes y seguridad electrónica para locales comerciales, combinando estética funcional con conectividad de alto rendimiento.
-            </p>
-            <button onclick="sendToWhatsapp('Consulta: Infraestructura Salud')" style="margin-top:25px; background:#8B0000; color:white; border:none; padding:12px 25px; font-family:'Rajdhani'; font-weight:bold; cursor:pointer; border-radius:4px;">ASESORÍA TÉCNICA</button>
+            <div style="padding:40px;">
+                <h2 style="color:#D4AF37; font-family:'Rajdhani'; font-size:2.2rem; margin-bottom:20px;">INTELIGENCIA ARTIFICIAL EN CCTV</h2>
+                <p style="color:#ccc; line-height:1.8; font-size:1.05rem; text-align:justify;">
+                    Implementación de algoritmos de analítica avanzada para detección de intrusos, reconocimiento facial y optimización de alertas preventivas en tiempo real.
+                </p>
+                <button onclick="sendToWhatsapp('Consulta: IA en Seguridad')" style="margin-top:25px; background:#8B0000; color:white; border:none; padding:12px 25px; font-family:'Rajdhani'; font-weight:bold; cursor:pointer; border-radius:4px;">VER TECNOLOGÍA</button>
+            </div>
         </div>
     </div>
-</div>
+
+    <div id="modal-blog-salud" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.95); backdrop-filter:blur(8px);">
+        <div style="background:#0a0f18; margin:2% auto; padding:0; border:1px solid #D4AF37; width:90%; max-width:850px; position:relative; overflow:hidden; border-radius:8px;">
+            <span onclick="closeModal('modal-blog-salud')" style="position:absolute; right:20px; top:15px; font-size:35px; color:#fff; cursor:pointer; z-index:100;">×</span>
+            
+            <div style="width:100%; height:350px; position:relative; overflow:hidden; background-color: rgba(10, 25, 47, 0.9); border-bottom: 3px solid #00F3FF;">
+                <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit: cover; position:absolute; z-index:2;">
+                    <source src="video_salud.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div style="padding:40px;">
+                <h2 style="color:#00F3FF; font-family:'Rajdhani'; font-size:2.2rem; margin-bottom:20px;">INFRAESTRUCTURA SECTOR SALUD</h2>
+                <p style="color:#ccc; line-height:1.8; font-size:1.05rem; text-align:justify;">
+                    Adecuación técnica de redes y seguridad electrónica para locales comerciales, combinando estética funcional con conectividad de alto rendimiento.
+                </p>
+                <button onclick="sendToWhatsapp('Consulta: Infraestructura Salud')" style="margin-top:25px; background:#8B0000; color:white; border:none; padding:12px 25px; font-family:'Rajdhani'; font-weight:bold; cursor:pointer; border-radius:4px;">ASESORÍA TÉCNICA</button>
+            </div>
+        </div>
+    </div>
 
     <footer style="text-align: center; padding: 40px 20px; background-color: #0a0f18; color: #ccc; font-family: 'Rajdhani', sans-serif; border-top: 2px solid var(--mva-gold);">
     
@@ -445,30 +446,29 @@
 
         // --- MVA SCROLL LOGIC V3.0 (FUERZA BRUTA) ---
         function bajarAlFooter() {
-            // Verificamos si la URL tiene el #contacto
             if (window.location.hash === '#contacto') {
                 const footer = document.getElementById('contacto');
                 if (footer) {
-                    // Intento 1: Inmediato
                     footer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    
-                    // Intento 2: Por si las imágenes cargan lento (reaseguro)
-                    setTimeout(() => {
-                        footer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    }, 500); // Medio segundo después
-
-                    // Intento 3: Aseguramiento final (1 segundo después)
-                    setTimeout(() => {
-                        footer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    }, 1000); 
+                    setTimeout(() => { footer.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 500);
+                    setTimeout(() => { footer.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 1000); 
                 }
             }
         }
 
-        // Ejecutamos la función cuando la ventana carga
-        window.addEventListener('load', bajarAlFooter);
+        // --- SCRIPTS DE LIMPIEZA DE URL (SOLO RAIZ) ---
+        function cleanUrlPath() {
+            if (window.location.pathname.endsWith('/index.html')) {
+                const cleanUrl = window.location.pathname.replace('/index.html', '/');
+                window.history.replaceState({}, document.title, cleanUrl);
+            }
+        }
+
+        window.addEventListener('load', () => {
+            bajarAlFooter();
+            cleanUrlPath();
+        });
         
-        // Ejecutamos también si el hash cambia mientras estamos en la página
         window.addEventListener('hashchange', bajarAlFooter);
     </script>
 </body>
