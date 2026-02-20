@@ -14,6 +14,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth;
         }
 
         /* Cabecera Corporativa (Logo y Nombre) */
@@ -99,6 +100,7 @@
             border-radius: 5px;
             transition: 0.3s;
             text-transform: uppercase;
+            cursor: pointer;
         }
 
         .back-btn:hover {
@@ -148,13 +150,20 @@
         <h2>4. Seguridad Técnica</h2>
         <p>Como empresa de ingeniería, implementamos protocolos de cifrado y seguridad administrativa para garantizar que su información no sea adulterada ni consultada por terceros no autorizados.</p>
 
-        <a href="index.html" class="back-btn">← Volver a la Página Principal</a>
+        <a href="index.html#contacto" class="back-btn">← Volver a la Página Principal</a>
     </div>
 
     <footer>
         &copy; 2026 MVA Afrodesktech Group | Ingeniería de Autor y Seguridad Electrónica.<br>
         Todos los derechos reservados.
     </footer>
+
+    <script>
+        // Este script asegura que al volver, la página principal ejecute el scroll
+        document.querySelector('.back-btn').addEventListener('click', function() {
+            window.location.href = "index.html#contacto";
+        });
+    </script>
 
 </body>
 </html>
